@@ -6,7 +6,7 @@
   "description": "Minimal repro for the LangGraph.js EventStreamCallbackHandler run-map bug when a compiled subgraph is used as a node in a parent graph and the parent streams events.",
   "scripts": {
     "dev": "rm -f log.txt && pnpm dev:backend 2>&1 | tee log.txt & pnpm dev:client 2>&1 | tee -a log.txt & wait",
-    "dev:backend": "langgraphjs dev --no-browser --port 3938",
+    "dev:backend": "langgraphjs dev  --port 3938",
     "dev:client": "LANGGRAPH_API_URL=http://localhost:3938 tsx run-client.ts",
     "typecheck": "tsc --noEmit"
   },
